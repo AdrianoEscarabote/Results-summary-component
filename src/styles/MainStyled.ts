@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainStyled = styled.div`
+export const MainStyled = styled.main`
 background-color: #fff;
 width: 46rem;
 height: 32rem;

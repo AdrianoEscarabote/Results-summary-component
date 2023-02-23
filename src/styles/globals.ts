@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-
 * {
   box-sizing: border-box;
 }
@@ -16,7 +15,6 @@ figure,
 blockquote,
 dl,
 dd {
-  font-family: 'Hanken Grotesk', sans-serif;
   margin: 0;
 }
 /* A elements that don't have a class get default styles */
@@ -55,7 +53,6 @@ html,
 body {
   width: 100%;
 }
-
 /* remove all button styles */
 button {
   all: unset;
@@ -82,7 +79,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
 .sr-only {
   position: absolute;
   width: 0.0625rem;
@@ -93,15 +89,18 @@ select {
   clip: rect(0,0,0,0);
   border: 0;
 }
-
-
-body,
-main {
+body {
+  text-rendering: optimizeSpeed;
+  font-family: 'Hanken Grotesk', sans-serif;
+  min-height: 100vh;
   background: #ECF2FF;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+}
+
+main {
+  animation: mainAnimation 1s ease-in-out;
 }
 
 @media (max-width: 800px) {
@@ -110,4 +109,15 @@ main {
     align-items: flex-start;
   }
 }
-`
+
+@media(min-width: 43.75rem) {
+  @keyframes mainAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    } to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+}`

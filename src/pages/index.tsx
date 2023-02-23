@@ -56,11 +56,13 @@ export default function Home() {
                     <li className={data.category} key={index}>
                       <div className="img_item">
                         <Image 
-                        src={data.icon} 
-                        alt="" 
-                        aria-hidden="true" 
-                        width={20}
-                        height={20}/>
+                          src={data.icon} 
+                          alt="" 
+                          width={20}
+                          height={20}
+                          loading="lazy"
+                          aria-hidden="true"
+                        />
                         <p>{data.category}</p>
                       </div>
                       <div className="number">
