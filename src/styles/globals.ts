@@ -76,7 +76,6 @@ select {
 body {
   text-rendering: optimizeSpeed;
   font-family: 'Hanken Grotesk', sans-serif;
-  min-height: 100vh;
   background: #ECF2FF;
   display: flex;
   align-items: center;
@@ -84,6 +83,11 @@ body {
 }
 main {
   animation: mainAnimation 1s ease-in-out;
+}
+@media (min-width: 50rem) and (min-height: 520px) {
+  body {
+    overflow: hidden;
+  }
 }
 @media (max-width: 800px) {
   body {

@@ -61,7 +61,6 @@ export default function Home() {
                           alt="" 
                           width={20}
                           height={20}
-                          loading="eager"
                           aria-hidden="true"
                         />
                         <p>{data.category}</p>
