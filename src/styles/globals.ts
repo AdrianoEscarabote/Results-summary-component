@@ -1,7 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-* {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 /* Remove default margin */
@@ -17,46 +22,25 @@ dl,
 dd {
   margin: 0;
 }
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul {
   list-style: none;
-}
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
-  line-height: 0;
-}
-/* this fixes the error in the animation that was displaying the scrollbar */
-html,
-body {
-  width: 100%;
-}
-/* remove all button styles */
-button {
-  all: unset;
-  cursor: pointer;
 }
 /* Inherit fonts for inputs and buttons */
 input,
@@ -98,18 +82,15 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 main {
   animation: mainAnimation 1s ease-in-out;
 }
-
 @media (max-width: 800px) {
   body {
     background: #fff;
     align-items: flex-start;
   }
 }
-
 @media(min-width: 43.75rem) {
   @keyframes mainAnimation {
     from {

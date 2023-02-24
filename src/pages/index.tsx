@@ -39,6 +39,7 @@ export default function Home() {
       
       <MainStyled  suppressHydrationWarning={true}>
         <div className="container">
+          <h1 className='sr-only'>welcome to my first project with nextjs</h1>
           <div className="result">
             <p className="res">Your Result</p>
             <div className="number_result">
@@ -60,7 +61,7 @@ export default function Home() {
                           alt="" 
                           width={20}
                           height={20}
-                          loading="lazy"
+                          loading="eager"
                           aria-hidden="true"
                         />
                         <p>{data.category}</p>
